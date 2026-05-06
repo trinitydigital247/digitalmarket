@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600&display=swap');
+
+        :root {
+            --gold: #c5a059;
+            --dark-canvas: #0f1113;
+            --soft-white: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-canvas);
+            color: var(--soft-white);
+            scroll-behavior: smooth;
+        }
+
+        .serif {
+            font-family: 'Bodoni Moda', serif;
+        }
+
+        .luxury-gradient {
+            background: linear-gradient(135deg, #1a1d21 0%, #0f1113 100%);
+        }
+
+        .gold-text {
+            color: var(--gold);
+        }
+
+        .btn-luxury {
+            background-color: var(--gold);
+            color: #000;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .btn-luxury:hover {
+            background-color: #d4b47a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        .nav-link {
+            position: relative;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.5s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .glass-nav {
+            background: rgba(15, 17, 19, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-nav flex justify-between items-center px-8 py-6 sticky top-0 z-50">
+        <div class="serif text-xl tracking-[0.2em] font-medium">TRINITY <span class="gold-text">DIGITAL</span></div>
+        <div class="space-x-10 hidden md:flex items-center">
+            <a href="#services" class="nav-link uppercase opacity-80 hover:opacity-100">Services</a>
+            <a href="#about" class="nav-link uppercase opacity-80 hover:opacity-100">Philosophy</a>
+            <a href="mailto:trinitydigital247@gmail.com" class="btn-luxury px-6 py-3 rounded-sm">Inquire</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 luxury-gradient">
+        <div class="max-w-4xl">
+            <span class="gold-text uppercase tracking-[0.4em] text-xs mb-6 block font-semibold">The New Standard</span>
+            <h1 class="serif text-5xl md:text-8xl mb-8 leading-tight">
+                Architects of <br> <span class="italic font-light">Digital Prestige.</span>
+            </h1>
+            <p class="text-lg text-slate-400 max-w-xl mx-auto mb-12 font-light leading-relaxed">
+                Refined strategy. Bespoke content. Data-driven growth for brands that demand nothing less than excellence.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="mailto:trinitydigital247@gmail.com" class="btn-luxury px-10 py-5 rounded-sm">Work with us</a>
+                <a href="#services" class="px-10 py-5 border border-white/10 hover:border-gold/50 transition uppercase text-xs tracking-widest flex items-center">Our Portfolio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+            <div class="max-w-xl">
+                <h2 class="serif text-4xl md:text-5xl mb-6">Mastery & <span class="gold-text">Execution</span></h2>
+                <p class="text-slate-400 font-light italic">Tailored digital solutions for the discerning brand.</p>
+            </div>
+            <div class="hidden md:block w-32 h-[1px] bg-white/10 mb-6"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12">
+            <!-- Service 1 -->
+            <div class="service-card p-10 group">
+                <div class="gold-text mb-8 text-2xl opacity-50 group-hover:opacity-100 transition">01</div>
+                <h3 class="serif text-2xl mb-4">Elite Marketing</h3>
+                <p class="text-slate-500 font-light leading-relaxed">Sophisticated paid media acquisition focusing on high-value conversion and brand positioning.</p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card p-10 group">
+                <div class="gold-text mb-8 text-2xl opacity-50 group-hover:opacity-100 transition">02</div>
+                <h3 class="serif text-2xl mb-4">Social Curation</h3>
+                <p class="text-slate-500 font-light leading-relaxed">Comprehensive management of your digital footprint, ensuring every touchpoint reflects your legacy.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card p-10 group">
+                <div class="gold-text mb-8 text-2xl opacity-50 group-hover:opacity-100 transition">03</div>
+                <h3 class="serif text-2xl mb-4">Visual Narrative</h3>
+                <p class="text-slate-500 font-light leading-relaxed">Cinematic content production designed for the algorithmic era of TikTok, Reels, and beyond.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 bg-white text-black">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="serif text-3xl md:text-5xl text-center mb-16 leading-snug">
+                "Digital presence is the <span class="italic">modern currency</span> of trust. We ensure your wealth only grows."
+            </h2>
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div>
+                    <div class="serif text-4xl mb-2">01</div>
+                    <div class="uppercase text-[10px] tracking-widest font-bold opacity-60">Strategy</div>
+                </div>
+                <div>
+                    <div class="serif text-4xl mb-2">02</div>
+                    <div class="uppercase text-[10px] tracking-widest font-bold opacity-60">Creative</div>
+                </div>
+                <div>
+                    <div class="serif text-4xl mb-2">03</div>
+                    <div class="uppercase text-[10px] tracking-widest font-bold opacity-60">Insight</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-[#0a0a0a] py-32 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="serif text-5xl md:text-7xl mb-12 italic">Secure your future.</h2>
+            <a href="mailto:trinitydigital247@gmail.com" class="inline-block px-12 py-6 btn-luxury rounded-sm mb-20">
+                Begin Consultation
+            </a>
+            
+            <div class="flex justify-center space-x-12 mb-20 opacity-40">
+                <a href="#" class="hover:text-gold hover:opacity-100 transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-gold hover:opacity-100 transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-gold hover:opacity-100 transition"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+
+            <div class="pt-8 border-t border-white/5 text-slate-600 text-[10px] uppercase tracking-[0.3em]">
+                &copy; 2026 TRINITY DIGITAL &mdash; ALL RIGHTS RESERVED
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
